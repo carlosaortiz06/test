@@ -13,7 +13,7 @@ pipeline {
         branch 'main'
       }
       steps {
-        echo '✔ Merge exitoso en la rama main'
+        echo 'Merge exitoso en la rama main'
         echo 'Desplegando hacia AWS... (simulación)'
 
       }
