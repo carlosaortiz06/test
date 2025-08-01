@@ -1,0 +1,28 @@
+pipeline {
+  agent any
+
+  stages {
+    stage('Checkout') {
+      steps {
+        checkout scm
+      }
+    }
+
+    stage('Simular merge en main') {
+      when {
+        branch 'main'
+      }
+      steps {
+        echo '✔ Merge exitoso en la rama main'
+        echo 'Desplegando hacia AWS... (simulación)'
+
+      }
+    }
+
+    stage('Fin del Pipeline') {
+      steps {
+        echo '✅ Proceso completo.'
+      }
+    }
+  }
+}
